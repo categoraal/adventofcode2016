@@ -1,12 +1,9 @@
 from copy import deepcopy
 input = open('in10').read().strip().split('\n')
 
-
-[print(i) for i in input]
 values = [[],[]] 
 bots = {}
 bots_list = []
-print(len(input))
 output = {}
 for i in input:
 	i = i.split()
@@ -21,8 +18,6 @@ for i in input:
 		values[0].append(i[1]) 
 		values[1].append(i[-2]+i[-1])	
 
-print(values)
-
 def findd(values):
 	doubles = []
 	for i in set(values[1]):
@@ -30,7 +25,6 @@ def findd(values):
 			doubles.append(i)
 	return doubles
 				
-
 def remap(doubles,x):
 	newvalues = deepcopy(values)	
 	for double in doubles:
@@ -60,11 +54,8 @@ while True:
 	if oldvalues == values:
 		break
 
-print(oldvalues)
 res = 1
 for idx,val in enumerate(values[1]):
 	if val[-2:] == 't0' or val[-2:] =='t1' or val[-2:] == 't2':
-		print(res)
-		print(int(values[0][idx]))
 		res = res * int(values[0][idx])	
 print(res)
