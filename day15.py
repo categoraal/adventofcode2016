@@ -5,8 +5,6 @@ for i in input:
 	i = i.split()
 	nums.append([int(i[3]),int(i[-1][:-1])])	
 
-print(nums)
-
 def pos(t,n,o):
 	return (t+o)%n
 
@@ -27,4 +25,3 @@ def f(nums):
 print(f(nums))
 nums.append([11,0])
 print(f(nums))
-#too high 203661
