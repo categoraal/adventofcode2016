@@ -1,6 +1,5 @@
 from itertools import permutations
 kaart = open('in24').read().strip().split('\n')
-[print(k) for k in kaart]
 
 letters = {}
 for y in range(len(kaart)):
